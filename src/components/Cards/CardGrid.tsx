@@ -19,6 +19,7 @@ export function CardGrid({ cardsPerPage, maxVisibleButtons }: Props) {
     const navigate = useNavigate();
     const params = useCardQuery();
 
+    // Actualiza la página actual al cambiar los parámetros de la URL
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         const page = queryParams.get('page');
@@ -26,6 +27,7 @@ export function CardGrid({ cardsPerPage, maxVisibleButtons }: Props) {
         setCurrentPage(pageNumber);
     }, [location.search]);
 
+    // Fetch de las cartas basado en los parámetros
     useEffect(() => {
         const fetchCards = async () => {
             const fetchedCards = await getAllCards(params);
@@ -36,6 +38,7 @@ export function CardGrid({ cardsPerPage, maxVisibleButtons }: Props) {
         fetchCards();
     }, [params, cardsPerPage]);
 
+    // Si la página actual supera el total de páginas, redirigir a la página 1
     useEffect(() => {
         if (currentPage > totalPages) {
             navigate('?page=1');

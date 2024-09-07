@@ -12,15 +12,13 @@ export default function CardBrowserPage() {
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
-        console.log("estoy siendo renderizado [CARD]");
-
         setQueryFromSearchParams(searchParams);
     }, [])
 
     return (
         <>
             <Header />
-            <main className="mx-auto max-w-6xl px-4 py-8 space-y-8">
+            <main className="mx-auto max-w-6xl px-4 py-8 space-y-8 flex-1">
                 <h1 className="text-3xl font-bold w-full text-left">Card browser</h1>
                 <div className="flex flex-col md:flex-row md:space-x-8 md:h-[calc(100vh-200px)]">
                     <aside className="w-full md:w-1/3 mb-8 md:mb-0">

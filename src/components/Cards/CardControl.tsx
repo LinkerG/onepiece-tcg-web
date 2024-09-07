@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCenteredCard, useResetCenteredCard } from "../../hooks/useCenteredCard";
 import { useUser } from "../../hooks/useUser";
+import { UserCollectionControls } from "./UserCollectionControls";
 
 export default function CardControl() {
     const centeredCard = useCenteredCard();
@@ -36,7 +37,7 @@ export default function CardControl() {
                         </div>
                         <div className="w-full h-1/2 flex items-center justify-center">
                             {user ? (
-                                <>{user.name}</>
+                                <UserCollectionControls />
                             ) : (
                                 <p className="text-2xl"><Link to="/login" className="text-blue-500">Log in</Link> to keep track of your collection</p>
                             )}

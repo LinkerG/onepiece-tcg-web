@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Cards from './pages/Cards';
 import Collections from './pages/Collections';
+import CollectionCards from './pages/CollectionCards';
 
 // <Route path="/" element={<Page />} />
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 {/* Public routes */}
                 <Route path="/cards" element={<Cards />} />
                 <Route path="/collections" element={<Collections />} />
+                <Route path="/collections/:collectionName" element={<CollectionCards />} />
             </Routes>
         </Router>
     );

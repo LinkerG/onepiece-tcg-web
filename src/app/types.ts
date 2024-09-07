@@ -7,6 +7,17 @@ export type User = {
     jwt: string;
 }
 
+export type UserCollection = {
+    _id: string;
+    user_id: string;
+    user_collection: CardEntry[];
+}
+
+export type CardEntry = {
+    card_id: string;
+    quantity: number;
+}
+
 // CARDS
 export enum Rarity {
     COMMON = 'C',
