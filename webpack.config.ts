@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -43,6 +44,11 @@ module.exports = {
             template: './public/index.html',
         }),
         new Dotenv(),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public', to: 'public' }, // Copia el directorio public al directorio de salida
+            ],
+        }),
     ],
     devServer: {
         static: {
@@ -50,6 +56,6 @@ module.exports = {
         },
         compress: true,
         port: 3000,
-        historyApiFallback: true, // Para manejar rutas en el frontend
+        historyApiFallback: true,
     },
 };
