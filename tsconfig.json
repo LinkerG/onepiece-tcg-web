@@ -17,7 +17,8 @@
       "jsx": "react-jsx",
       "paths": {
         "@components": ["./src/components/"],
-        "@types" : ["./src/app/types"],
+        "@hooks": ["./src/hooks/"],
+        "@types" : ["./src/app/types.ts"],
         "@api": ["./src/app/api/"],
         "@store": ["./src/app/store/"],
         "@config": ["./src/app/config"],
