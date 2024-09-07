@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import LoginForm from "../components/Forms/LoginForm";
 
-export default function Login() {
+export default function LoginPage() {
     return (
         <>
             <Header />

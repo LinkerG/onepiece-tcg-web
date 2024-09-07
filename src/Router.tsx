@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cards from './pages/Cards';
+import Collections from './pages/Collections';
 
 // <Route path="/" element={<Page />} />
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 {/* Public routes */}
                 <Route path="/cards" element={<Cards />} />
+                <Route path="/collections" element={<Collections />} />
             </Routes>
         </Router>
     );
