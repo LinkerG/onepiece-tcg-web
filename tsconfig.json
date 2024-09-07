@@ -14,7 +14,14 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
-      "jsx": "react-jsx"
+      "jsx": "react-jsx",
+      "paths": {
+        "@components": ["./src/components/"],
+        "@types" : ["./src/app/types"],
+        "@api": ["./src/app/api/"],
+        "@store": ["./src/app/store/"],
+        "@config": ["./src/app/config"],
+      }
     },
     "include": ["src", "src/app"]
 }
