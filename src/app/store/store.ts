@@ -1,13 +1,13 @@
-// src/app/store.ts
-
 import { configureStore } from '@reduxjs/toolkit';
 import userSlice from './slices/user';
 import cardSearchSlice from './slices/cardSearch';
+import centeredCardSlice from './slices/centeredCard';
 
 export const store = configureStore({
     reducer: {
         user: userSlice,
-        cardSearch: cardSearchSlice
+        cardSearch: cardSearchSlice,
+        centeredCard: centeredCardSlice,
     },
 });
 

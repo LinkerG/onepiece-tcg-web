@@ -1,14 +1,23 @@
 import React from 'react';
 import { Card as TCard } from '@types';
 import Tilt from 'react-parallax-tilt';
+import { useSetCenteredCard } from '../hooks/useCenteredCard';
 
 interface Props {
     card: TCard;
     shadow?: boolean;
-    setCenteredCard?: (params: any) => void;
+    centerCard?: boolean
 }
 
-export function CardTiltable({ card, shadow, setCenteredCard }: Props) {
+export function CardTiltable({ card, shadow, centerCard }: Props) {
+    const setCenteredCard = useSetCenteredCard();
+
+    function handleCardClick(card: TCard) {
+        if (centerCard) {
+            setCenteredCard(card)
+        }
+    }
+
     return (
         <Tilt
             glareEnable={true}
@@ -24,15 +33,23 @@ export function CardTiltable({ card, shadow, setCenteredCard }: Props) {
                     ${shadow ? 'shadow-lg' : ''}
                     `}
                 loading="lazy"
-                onClick={() => setCenteredCard && setCenteredCard(card)}
                 width={100}
                 height={100}
+                onClick={() => handleCardClick(card)}
             />
         </Tilt>
     );
 }
 
-export function Card({ card, shadow, setCenteredCard }: Props) {
+export function Card({ card, shadow, centerCard }: Props) {
+    const setCenteredCard = useSetCenteredCard();
+
+    function handleCardClick(card: TCard) {
+        if (centerCard) {
+            setCenteredCard(card)
+        }
+    }
+
     return (
         <img
             src={`/cards/${card.card_id.split("-")[0]}/${card.card_id}.png`}
@@ -42,7 +59,7 @@ export function Card({ card, shadow, setCenteredCard }: Props) {
                 ${shadow ? 'shadow-lg' : ''}
                 `}
             loading="lazy"
-            onClick={() => setCenteredCard && setCenteredCard(card)}
+            onClick={() => handleCardClick(card)}
         />
     )
 }

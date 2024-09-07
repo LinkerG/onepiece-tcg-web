@@ -5,6 +5,7 @@ import { FilterCardForm } from "../components/Forms/FilterCardForm";
 import Header from "../components/Header";
 import { CardsQuery } from "@types";
 import { useCardQuery, useSetCardQueryFromSearchParams } from "../hooks/useCardSearch";
+import CardControl from "../components/Cards/CardControl";
 
 export default function CardBrowserPage() {
     const setQueryFromSearchParams = useSetCardQueryFromSearchParams();
@@ -23,7 +24,7 @@ export default function CardBrowserPage() {
                 <h1 className="text-3xl font-bold w-full text-left">Card browser</h1>
                 <div className="flex flex-col md:flex-row md:space-x-8 md:h-[calc(100vh-200px)]">
                     <aside className="w-full md:w-1/3 mb-8 md:mb-0">
-                        <div className="sticky top-2 2xl:top-6 md:h-full overflow-auto shadow-lg border border-black rounded-lg">
+                        <div className="sticky top-2 2xl:top-6 md:h-full overflow-auto shadow-lg border border-black rounded-lg flex">
                             <FilterCardForm />
                         </div>
                     </aside>
@@ -36,10 +37,7 @@ export default function CardBrowserPage() {
                         </Suspense>
                     </div>
                 </div>
-                {/* <CardControl
-                centeredCard={centeredCard}
-                handleContainerClick={handleContainerClick}
-            /> */}
+                <CardControl />
             </main>
         </>
     );

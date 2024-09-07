@@ -140,6 +140,7 @@ export function CardGrid({ cardsPerPage, maxVisibleButtons }: Props) {
                         <CardTiltable
                             card={card}
                             shadow
+                            centerCard
                         />
                     </div>
                 ))}

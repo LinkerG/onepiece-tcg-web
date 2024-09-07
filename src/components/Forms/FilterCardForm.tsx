@@ -61,8 +61,9 @@ export function FilterCardForm() {
         }
     }
 
+    // TODO: Implement cart_type filter
     return (
-        <form onSubmit={handleFormAction} className="p-4 bg-white">
+        <form onSubmit={handleFormAction} className="p-4 bg-white flex-1 flex flex-col">
             <div className="space-y-4">
                 <div className="w-full">
                     <TextInput
@@ -105,17 +106,19 @@ export function FilterCardForm() {
                     selectedValues={parameters.color}
                 />
             </div>
-            <button type="submit"
-                className="w-full mt-6 focus:outline-none text-white bg-red-500 hover:bg-red-600 focus:ring-2 focus:bg-red-700 focus:ring-red-600 font-medium rounded-lg text-sm px-5 py-2.5"
-            >
-                Search
-            </button>
-            <button type="button"
-                onClick={() => clearFilters()}
-                className="w-full mt-6 focus:outline-none text-gray-700 border bg-white hover:bg-gray-100 focus:ring-2 focus:bg-gray-200 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5"
-            >
-                Clear filters
-            </button>
+            <div className="w-full mt-auto mb-2">
+                <button type="submit"
+                    className="w-full mt-6 focus:outline-none text-white bg-red-500 hover:bg-red-600 focus:ring-2 focus:bg-red-700 focus:ring-red-600 font-medium rounded-lg text-sm px-5 py-2"
+                >
+                    Search
+                </button>
+                <button type="button"
+                    onClick={() => clearFilters()}
+                    className="w-full mt-2 focus:outline-none text-gray-700 border bg-gray-100 hover:bg-gray-200 focus:ring-2 focus:bg-gray-300 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2"
+                >
+                    Clear filters
+                </button>
+            </div>
         </form>
     );
 }
