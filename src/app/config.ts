@@ -2,8 +2,7 @@
 
 const config = {
     BACKEND_URL: process.env.BACKEND_URL,
-    MENSAJE: process.env.MENSAJE
+    CARD_TRADER_TOKEN: process.env.CARD_TRADER_TOKEN,
 };
-  
+
 export default config;
-  
