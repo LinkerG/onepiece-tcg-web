@@ -46,7 +46,7 @@ module.exports = {
         new Dotenv(),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'public', to: 'public' }, // Copia el directorio public al directorio de salida
+                { from: 'public', to: '/' }, // Copia el directorio public al directorio de salida
             ],
         }),
     ],
