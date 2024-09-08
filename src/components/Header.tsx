@@ -35,6 +35,7 @@ export default function Header() {
                             <span className="text-white text-2xl ml-3 font-bold hover">One Piece TCG</span>
                         </Link>
                     </li>
+                    <li className="h-8 w-1 ml-1 border-l border-gray-300"></li>
                     <li className="px-4">
                         <Link
                             to="/cards"
@@ -85,8 +86,12 @@ export default function Header() {
             <div className="ml-auto flex justify-center items-center">
                 {user != null ? (
                     <>
-                        <p className="">{user.name}</p>
-                        <button onClick={() => handleLogout()}>Logout</button>
+                        <p className="text-white text-xl px-4 py-2 rounded-md transition-all">{user.name}</p>
+                        <button onClick={() => handleLogout()}
+                            className="text-white text-xl px-4 py-2 rounded-md hover:underline transition-all"
+                        >
+                            Logout
+                        </button>
                     </>
                 ) : (
                     <>
