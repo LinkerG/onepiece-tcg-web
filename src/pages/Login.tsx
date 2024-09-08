@@ -10,7 +10,7 @@ export default function LoginPage() {
                 <LoginForm />
                 <img
                     className="absolute z-0 opacity-20"
-                    src="/tcglogo.webp"
+                    src="/images/tcglogo.webp"
                     alt="One Piece TCG Logo"
                     width={800}
                     height={800}

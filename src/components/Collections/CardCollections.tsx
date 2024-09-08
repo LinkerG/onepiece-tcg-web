@@ -26,8 +26,8 @@ export default function CardCollections() {
                         <Link to={`/collections/${collection}`} className="w-full">
                             <ImageWithFallback
                                 className="object-contain w-full"
-                                src={`/collections/${collection}.png`}
-                                fallback="/collections/OP_EB_DEFAULT.png"
+                                src={`/images/collections/${collection}.png`}
+                                fallback="/images/collections/OP_EB_DEFAULT.png"
                                 alt={collection}
                             />
                         </Link>
@@ -43,8 +43,8 @@ export default function CardCollections() {
                         <Link to={`/collections/${collection}`} className="w-full">
                             <ImageWithFallback
                                 className="object-contain w-full"
-                                src={`/collections/${collection}.png`}
-                                fallback="/collections/ST_DEFAULT.png"
+                                src={`/images/collections/${collection}.png`}
+                                fallback="/images/collections/ST_DEFAULT.png"
                                 alt={collection}
                                 width={1000}
                                 height={1000}
@@ -61,8 +61,8 @@ export default function CardCollections() {
                     <Link to={`/collections/P`} className="w-full">
                         <ImageWithFallback
                             className="object-contain w-full"
-                            src={`/collections/PROMO.png`}
-                            fallback="/collections/OP_EB_DEFAULT.png"
+                            src={`/images/collections/PROMO.png`}
+                            fallback="/images/collections/OP_EB_DEFAULT.png"
                             alt="PROMO"
                         />
                     </Link>
@@ -72,8 +72,8 @@ export default function CardCollections() {
                     <Link to={`/collections/DON`} className="w-full">
                         <ImageWithFallback
                             className="object-contain w-full"
-                            src={`/collections/DON.png`}
-                            fallback="/collections/OP_EB_DEFAULT.png"
+                            src={`/images/collections/DON.png`}
+                            fallback="/images/collections/OP_EB_DEFAULT.png"
                             alt="DON"
                         />
                     </Link>

@@ -26,7 +26,7 @@ export function CardTiltable({ card, shadow, centerCard }: Props) {
             glarePosition="all"
         >
             <img
-                src={`/cards/${card.card_id.split("-")[0]}/${card.card_id}.png`}
+                src={`/images/cards/${card.card_id.split("-")[0]}/${card.card_id}.png`}
                 alt={card.card_id}
                 className={`
                     w-full h-auto object-contain rounded-lg select-none
@@ -52,7 +52,7 @@ export function Card({ card, shadow, centerCard }: Props) {
 
     return (
         <img
-            src={`/cards/${card.card_id.split("-")[0]}/${card.card_id}.png`}
+            src={`/images/cards/${card.card_id.split("-")[0]}/${card.card_id}.png`}
             alt={card.card_id}
             className={`
                 w-full h-auto object-contain rounded-lg select-none

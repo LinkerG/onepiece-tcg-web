@@ -40,7 +40,7 @@ export default function RegisterForm() {
         >
             <img
                 className='mt-2 mb-6'
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="One Piece TCG Logo"
             />
             <div className="mb-6">

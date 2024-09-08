@@ -26,7 +26,7 @@ export default function Header() {
                             }
                             className="flex justify-center items-center">
                             <img
-                                src='/tcglogo.webp'
+                                src='/images/tcglogo.webp'
                                 className="black-to-white"
                                 alt="One Piece TCG Logo"
                                 width={35}
